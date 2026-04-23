@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-page="project">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Null Mono — Martin Pirek</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+
+  <nav id="navbar">
+    <div class="nav-brand"><span class="nav-cursor">▮</span> PORTFOLIO_</div>
+    <div style="display:flex;gap:0.75rem;align-items:center;">
+      <a href="../index.html#work" class="nav-back">← BACK TO WORK</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+        <span id="theme-label">◑ LIGHT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <span class="project-cat">// TYPOGRAPHY · 2023</span>
+        <h1 class="project-title glitch" data-text="NULL MONO">NULL MONO</h1>
+        <p class="project-tagline">A custom monospaced typeface designed for technical documentation and code-adjacent interfaces — 4 weights, 480 glyphs, full Latin coverage.</p>
+      </div>
+    </section>
+
+    <!-- META -->
+    <div class="project-meta-bar">
+      <div class="meta-grid">
+        <div><span class="meta-label">// YEAR</span><span class="meta-value">2023</span></div>
+        <div><span class="meta-label">// ROLE</span><span class="meta-value">TYPE DESIGNER</span></div>
+        <div><span class="meta-label">// TOOLS</span><span class="meta-value">GLYPHS · FONTLAB</span></div>
+        <div><span class="meta-label">// GLYPHS</span><span class="meta-value">480 PER WEIGHT</span></div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 01 — OVERVIEW</h2>
+        <div class="project-body">
+          <div>
+            <p>Null Mono began as a personal tool — a typeface I could use across my own projects where existing monospaced options felt either too engineered or too neutral. Over fourteen months it grew into a fully released typeface with four weights and 480 glyphs per weight.</p>
+            <p>The design brief I set myself was strict: the Regular weight must perform at 9px on screen without hinting artifacts, punctuation must be immediately legible in dense code contexts, and the character set must cover all Western European languages plus a full technical symbol range.</p>
+            <p>The four weights — Light, Regular, Medium, Bold — are optically compensated rather than mechanically interpolated, giving each weight its own rhythm while maintaining a coherent family feel.</p>
+          </div>
+          <pre class="project-ascii-block">
+  NULL MONO — TYPE SPECIMEN
+  ─────────────────────────────────
+  LIGHT    AaBbCc 0123 !@#$%^&*
+  REGULAR  AaBbCc 0123 !@#$%^&*
+  MEDIUM   AaBbCc 0123 !@#$%^&*
+  BOLD     AaBbCc 0123 !@#$%^&*
+  ─────────────────────────────────
+  "The quick brown fox jumps over"
+   the lazy dog. [0x41 0x61 0x31]
+  ─────────────────────────────────
+  480 glyphs · 4 weights · OTF/TTF</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER SET -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 02 — CHARACTER SET</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">  UPPERCASE
+  ─────────────────
+  ABCDEFGHIJKLM
+  NOPQRSTUVWXYZ
+  ─────────────────
+  26 GLYPHS<span class="gallery-item-label">LATIN UPPERCASE</span></div>
+          <div class="gallery-item">  LOWERCASE
+  ─────────────────
+  abcdefghijklm
+  nopqrstuvwxyz
+  ─────────────────
+  26 GLYPHS<span class="gallery-item-label">LATIN LOWERCASE</span></div>
+          <div class="gallery-item">  NUMERALS
+  ─────────────────
+  0 1 2 3 4
+  5 6 7 8 9
+  TABULAR FIGURES
+  ─────────────────<span class="gallery-item-label">FIGURES</span></div>
+          <div class="gallery-item">  PUNCTUATION
+  ─────────────────
+  ! " # $ % & '
+  ( ) * + , - .
+  / : ; < = > ?
+  @ [ \ ] ^ _ `<span class="gallery-item-label">ASCII PUNCTUATION</span></div>
+          <div class="gallery-item">  SYMBOLS
+  ─────────────────
+  ░ ▒ ▓ █ ─ │
+  ┤ ╡ ╢ ╖ ╕ ╣
+  ║ ╗ ╝ ╜ ╛ ┐
+  └ ┴ ┬ ├ ┼ ╞<span class="gallery-item-label">BOX DRAWING</span></div>
+          <div class="gallery-item">  METRICS
+  ─────────────────
+  UPM      1000
+  ASCENDER  800
+  DESCENDER 200
+  X-HEIGHT  530
+  CAP-H     700<span class="gallery-item-label">VERTICAL METRICS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 03 — PROCESS</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">STEP 01</span>
+            <span class="step-title">RESEARCH</span>
+            <span class="step-desc">Studied 30 monospaced typefaces in detail. Measured x-heights, stem widths, punctuation width, and character differentiation on low-res screens.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 02</span>
+            <span class="step-title">SKELETON DRAWING</span>
+            <span class="step-desc">All 480 Regular glyphs drawn by hand on a 9×9 grid before moving to Glyphs. Skeleton approval before any weight variation.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 03</span>
+            <span class="step-title">WEIGHT INTERPOLATION</span>
+            <span class="step-desc">Light and Bold drawn as masters; Medium and Regular optically corrected from the interpolation axis rather than accepted as-is.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 04</span>
+            <span class="step-title">TESTING + RELEASE</span>
+            <span class="step-desc">Beta tested across six editors and five operating systems. Kerning refined through 200 test strings. Released in OTF and TTF formats.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT NAV -->
+    <div class="project-nav-footer">
+      <a href="archive.html" class="btn-ghost">← ARCHIVE</a>
+      <a href="../index.html#work" class="btn-primary">← BACK TO ALL WORK</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <span>MARTIN PIREK © 2026</span>
+        <span>DESIGNED WITH ░ IN PRAGUE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

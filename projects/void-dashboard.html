@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-page="project">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Void Dashboard — Martin Pirek</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+
+  <nav id="navbar">
+    <div class="nav-brand"><span class="nav-cursor">▮</span> PORTFOLIO_</div>
+    <div style="display:flex;gap:0.75rem;align-items:center;">
+      <a href="../index.html#work" class="nav-back">← BACK TO WORK</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+        <span id="theme-label">◑ LIGHT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <span class="project-cat">// UI / UX · 2024</span>
+        <h1 class="project-title glitch" data-text="VOID DASHBOARD">VOID DASHBOARD</h1>
+        <p class="project-tagline">Interface design for a data visualisation platform — dark theme, modular component library, and WCAG AA accessibility across all views.</p>
+      </div>
+    </section>
+
+    <!-- META -->
+    <div class="project-meta-bar">
+      <div class="meta-grid">
+        <div><span class="meta-label">// YEAR</span><span class="meta-value">2024</span></div>
+        <div><span class="meta-label">// ROLE</span><span class="meta-value">UI / UX DESIGNER</span></div>
+        <div><span class="meta-label">// TOOLS</span><span class="meta-value">FIGMA · CSS</span></div>
+        <div><span class="meta-label">// SCREENS</span><span class="meta-value">48 COMPONENTS</span></div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 01 — OVERVIEW</h2>
+        <div class="project-body">
+          <div>
+            <p>Void is a data visualisation platform built for infrastructure teams tracking system health, pipeline throughput, and anomaly detection in real time. The design challenge was density: how to present high-information dashboards without triggering cognitive overload.</p>
+            <p>The solution is a modular component library built on an 8px spatial grid, with three density modes — compact, comfortable, and spacious — switchable per user. A strict dark theme reduces eye strain during long monitoring sessions, with colour used exclusively to communicate state.</p>
+            <p>Accessibility was a primary constraint: all interactive elements meet WCAG AA contrast ratios, with keyboard navigation and screen-reader labels built in from the start.</p>
+          </div>
+          <pre class="project-ascii-block">
+  ┌──────────────────────────────┐
+  │ [■] VOID  ─────────────────  │
+  │  ○  ○  ○  ○  ○  ───  ○  ○  │
+  │ ┌─────────┐  ┌────────────┐  │
+  │ │ ██ ░░░░ │  │ ▓ STATUS   │  │
+  │ │ ██ ████ │  │ ● ONLINE   │  │
+  │ │ ░░ ████ │  │ ○ IDLE     │  │
+  │ └─────────┘  │ ○ OFFLINE  │  │
+  │              └────────────┘  │
+  │ ▓▓▓▓▓▓▓░░░░░░░░░  72%       │
+  └──────────────────────────────┘</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENS -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 02 — SCREENS</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">  ┌──────────────┐
+  │ OVERVIEW     │
+  │ ──────────── │
+  │ ▓▓▓░░░  CPU  │
+  │ ▓▓▓▓▓░  MEM  │
+  │ ▓▓░░░░  DISK │
+  └──────────────┘<span class="gallery-item-label">MAIN DASHBOARD</span></div>
+          <div class="gallery-item">  COMPONENT STATES
+  ─────────────────
+  [●] DEFAULT
+  [●] HOVER
+  [●] ACTIVE
+  [●] DISABLED
+  [●] ERROR
+  <span class="gallery-item-label">BUTTON LIBRARY</span></div>
+          <div class="gallery-item">  ┌──────────────┐
+  │ ALERT: HIGH  │
+  │ ─────────    │
+  │ Node #4      │
+  │ CPU > 94%    │
+  │ [DISMISS]    │
+  └──────────────┘<span class="gallery-item-label">ALERT MODAL</span></div>
+          <div class="gallery-item">  ║ COL 1  ║ COL 2 ║
+  ╠════════╬═══════╣
+  ║ row 01 ║ 99.9% ║
+  ║ row 02 ║ 87.2% ║
+  ║ row 03 ║ 45.0% ║
+  ╚════════╩═══════╝<span class="gallery-item-label">DATA TABLE</span></div>
+          <div class="gallery-item">  DENSITY MODES
+  ─────────────────
+  ▣ COMPACT   8px
+  ▣ DEFAULT  12px
+  ▣ SPACIOUS 16px
+  ─────────────────
+  USER PREFERENCE<span class="gallery-item-label">SPATIAL SYSTEM</span></div>
+          <div class="gallery-item">  ACCESSIBILITY
+  ─────────────────
+  ✓ WCAG AA
+  ✓ KEYBOARD NAV
+  ✓ ARIA LABELS
+  ✓ 4.5:1 CONTRAST
+  <span class="gallery-item-label">A11Y AUDIT</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <h2 class="project-section-title">// 03 — PROCESS</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">STEP 01</span>
+            <span class="step-title">USER RESEARCH</span>
+            <span class="step-desc">Eight interviews with infrastructure engineers. Identified pain points: information overload, poor state communication, lack of density control.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 02</span>
+            <span class="step-title">INFORMATION ARCH</span>
+            <span class="step-desc">Mapped all data entities and their relationships. Defined a hierarchy model that reduced main-view components by 40%.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 03</span>
+            <span class="step-title">COMPONENT BUILD</span>
+            <span class="step-desc">48 components built in Figma with auto-layout and component properties. Three density variants per interactive element.</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 04</span>
+            <span class="step-title">HANDOFF + CSS</span>
+            <span class="step-desc">Full CSS token sheet delivered alongside Figma. Collaborated with two frontend engineers during implementation sprint.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT NAV -->
+    <div class="project-nav-footer">
+      <a href="pulse-opener.html" class="btn-ghost">← PULSE OPENER</a>
+      <a href="archive.html" class="btn-primary">NEXT: ARCHIVE →</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <span>MARTIN PIREK © 2026</span>
+        <span>DESIGNED WITH ░ IN PRAGUE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
