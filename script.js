@@ -236,7 +236,7 @@
       // Don't double-trigger if user clicks the card-link directly
       if (e.target.closest('.card-link')) return;
       const url = card.dataset.href;
-      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+      if (url) window.location.href = url;
     });
   });
 })();
@@ -261,86 +261,6 @@
 /* ─── NAV CURSOR BLINK ───────────────────────────────────── */
 // Already handled via CSS @keyframes blink on .nav-cursor
 
-/* ─── CONTACT FORM ───────────────────────────────────────── */
-(function initForm() {
-  const form     = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const submitTxt = document.getElementById('submit-text');
-  const feedback  = document.getElementById('form-feedback');
-
-  if (!form) return;
-
-  // Terminal-style typing indicator on focus
-  const inputs = form.querySelectorAll('input, textarea');
-  inputs.forEach(input => {
-    input.addEventListener('focus', () => {
-      input.closest('.input-wrap').style.borderColor = 'rgba(255,255,255,0.8)';
-    });
-    input.addEventListener('blur', () => {
-      input.closest('.input-wrap').style.borderColor = '';
-    });
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const name    = form.name.value.trim();
-    const email   = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    // Basic validation
-    if (!name) {
-      showFeedback('> ERROR: NAME field is required.', 'error');
-      form.name.focus();
-      return;
-    }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showFeedback('> ERROR: Valid EMAIL address required.', 'error');
-      form.email.focus();
-      return;
-    }
-    if (!message) {
-      showFeedback('> ERROR: MESSAGE cannot be empty.', 'error');
-      form.message.focus();
-      return;
-    }
-
-    // Simulate send
-    setLoading(true);
-    showFeedback('> TRANSMITTING...', '');
-
-    await delay(1800);
-
-    setLoading(false);
-    showFeedback('> MESSAGE SENT. I\'ll be in touch soon.', 'success');
-    typeConfirmation();
-    form.reset();
-  });
-
-  function setLoading(on) {
-    submitBtn.disabled = on;
-    submitTxt.textContent = on ? 'SENDING_...' : 'SEND_MESSAGE →';
-  }
-
-  function showFeedback(msg, cls) {
-    feedback.textContent = msg;
-    feedback.className   = 'form-feedback ' + cls;
-  }
-
-  function typeConfirmation() {
-    const msg   = '> TRANSMISSION COMPLETE. STANDING BY.';
-    let   i     = 0;
-    feedback.textContent = '';
-    feedback.className   = 'form-feedback success';
-
-    const t = setInterval(() => {
-      feedback.textContent = msg.slice(0, i++);
-      if (i > msg.length) clearInterval(t);
-    }, 35);
-  }
-
-  function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
-})();
 
 /* ─── PROJECT CARD: DATA-INDEX COUNTER ───────────────────── */
 (function initCardIndex() {
